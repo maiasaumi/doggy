@@ -6,9 +6,10 @@ const app = express();
 app.use(express.json());
 
 app.get("/", async (_, res) => {
-  const data = await knex.select().table("doggyplace");
+  /*const data = await knex.select().table("doggyplace");
   res.status(200);
-  res.send(data);
+  res.send(data);*/
+  res.send("Hello World");
 });
 
 /*app.post("/doggyplace/post", async (_, res) => {
