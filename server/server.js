@@ -33,7 +33,7 @@ app.get("/", async (_, res) => {
   res.send(data);
 });*/
 
-const port = 9999 || process.env.PORT;
-app.listen(9999, () => {
+const port = process.env.PORT || 9999;
+app.listen(port, () => {
   console.log(`🎉 Server running at https://localhost:${port}!`);
 });
