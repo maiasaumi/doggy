@@ -2,6 +2,7 @@
   "name": "doggy",
   "description": "Shell into psql, and create a database called notes. Connect to your database. \\c notes Complete the following SQL code (replace the ??? values), and run it in your psql shell to create a table for your notes.",
   "version": "1.0.0",
+  "proxy": "http://localhost:9999",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -23,6 +24,7 @@
     "express": "^4.17.1",
     "graphql": "^15.5.0",
     "knex": "^0.21.17",
+    "knex-cli": "^1.0.2",
     "nodemon": "^2.0.7",
     "pg": "^8.5.1"
   }
