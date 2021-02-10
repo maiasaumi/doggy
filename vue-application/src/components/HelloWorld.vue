@@ -5,7 +5,8 @@
       You can search for facilities in Ehime Prefecture where you can play with
       dogs. We hope you have a wonderful time with your dog!
     </p>
-    <h3>Installed CLI Plugins</h3>
+  </div>
+  <!-- <h3>Installed CLI Plugins</h3>
     <ul>
       <li>
         <a
@@ -80,7 +81,7 @@
         >
       </li>
     </ul>
-  </div>
+  </div> -->
 </template>
 
 <script>

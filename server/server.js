@@ -1,11 +1,12 @@
 //require("dotenv").config();
 const express = require("express");
 const knex = require("../knexfile");
+const cors = require("cors");
 
 const app = express();
 
 app.use(express.json());
-
+app.use(cors());
 app.get("/api/", async (req, res) => {
   try {
     const data = await knex.select().table("doggyplace");
@@ -67,4 +68,14 @@ Make a get request to display on frontend
   -/data
   Initialize of vue frontend
   -start building some UI for your front end
+*/
+
+/*
+serve your vue front end
+   -you should be able to see the starting template, the one with the view logo 
+use AXIOS axios.get(endpoint url to request data)
+  -you need to catch this data in a variable so something like const data = axios.get(api endpoint)
+
+follow your truckstops vue.js front end files to render a map and the data from your backend.
+
 */

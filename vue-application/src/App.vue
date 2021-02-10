@@ -59,19 +59,34 @@ export default {
 </script> -->
 
 <template>
-  <div id="img">
-    <img alt="Inu" src="./assets/inu.jpg" />
-  </div>
-  <HelloWorld msg="Welcome to Doggy Place!" />
+  <main>
+    <div id="img">
+      <img alt="Inu" src="./assets/inu.jpg" />
+    </div>
+    <HelloWorld msg="Welcome to Doggy Place!" />
+    <div>{{ dogs }}</div>
+  </main>
 </template>
 
 <script>
 import HelloWorld from "./components/HelloWorld.vue";
+import axios from "axios";
 
 export default {
   name: "App",
   components: {
     HelloWorld,
+  },
+  data: () => ({
+    dogs: [],
+  }),
+
+  mounted: async function() {
+    //where I use axios
+    const dogs = await axios.get("http://localhost:9999/api");
+    console.log(dogs);
+    //set this.dogs to axios response
+    this.dogs = dogs.data;
   },
 };
 </script>
