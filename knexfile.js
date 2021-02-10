@@ -1,6 +1,7 @@
 // Update with your config settings.
 
-module.exports = {
+const knex = require("knex");
+const database = knex({
   client: "pg",
   connection: {
     connectionString:
@@ -12,7 +13,22 @@ module.exports = {
   migrations: {
     directory: `${__dirname}/migrations`,
   },
-};
+});
+module.exports = database;
+
+// module.exports = {
+//   client: "pg",
+//   connection: {
+//     connectionString:
+//       process.env.DATABASE_URL ||
+//       `postgres://${process.env.USER}:${process.env.PW}@127.0.0.1:5432/doggyplace`,
+//     ssl: process.env.HAS_SSL ? { rejectUnauthorized: false } : undefined,
+//   },
+//   searchPath: "public",
+//   migrations: {
+//     directory: `${__dirname}/migrations`,
+//   },
+// };
 
 // const config = {
 //     client: "pg",

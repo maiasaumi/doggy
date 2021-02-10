@@ -1,16 +1,26 @@
-require("dotenv").config();
+//require("dotenv").config();
 const express = require("express");
-const knex = require("./knex");
+const knex = require("../knexfile");
 
 const app = express();
 
 app.use(express.json());
 
-app.get("/", async (_, res) => {
-  const data = await knex.select().table("doggyplace");
-  //res.status(200);
-  res.json(data);
+app.get("/api/", async (req, res) => {
+  try {
+    const data = await knex.select().table("doggyplace");
+    res.json(data);
+  } catch (err) {
+    console.error("Error loading doggyplace!", err);
+    res.sendStatus(500);
+  }
 });
+
+/*app.get("/", async (_, res) => {
+  // const data = await knex.select().table("doggyplace");
+  // res.status(200);
+  // res.json(data);
+});*/
 
 /*app.post("/doggyplace/post", async (_, res) => {
   await knex("doggyplace").insert({
@@ -46,7 +56,7 @@ app.listen(port, () => {
 //STEP5: Make a simple get request "Hello World"
 
 /*
-Setup migration and seeding file by 18:30
+done Setup migration and seeding file by 18:30
   -fill out the migrations file template
   -run the migration so that it builds the table in your database (test this by dropping the table, running the server and see if it builds)
   -Next in your config file, set up your seeding directory
