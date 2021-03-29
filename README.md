@@ -1,27 +1,24 @@
 # Doggy Place
 
-About
-This was created during a team project at Code Chrysalis.
-This app that helps user find places where to play with dogs in Ehime.
+- This was created during a solo project at Code Chrysalis
+- This app helps user to find places where to play with dogs in Ehime
 
-Goal
-User can search for dog runs, and hotels where user can stay with dogs
-User can use the google map api to check the location.
-User can search hotels and dog runs by name of facilities or filtering name of prefecture
-User can see information on a selected places
+# Goal
 
-Key learnings
+- User can search for dog runs, and hotels where user can stay with dogs
+- User can use the google map api to check the location
+- User can search hotels and dog runs by name of facilities or filtering name of prefecture
+- User can see information on a selected places
 
-JavaScript
-Vue
-Postgres
-Knex
-Heroku
-Express
+# Key learnings
 
-How it works
+- JavaScript
+- Vue.js
+- Postgres
+- Knex.js
+- Heroku
+- Express
 
-...
+# Project status
 
-Project status
 Work in progress
